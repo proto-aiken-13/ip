@@ -22,18 +22,18 @@ public class UI {
      * Sends a greeting message to the user.
      */
     public static void greet() {
-        System.out.println("____________________________________________________________\n" +
-                " Hellooooooooooo! I'm Lati!\n" +
-                " What can I do for you? :3\n" +
-                "____________________________________________________________");
+        System.out.println("____________________________________________________________\n"
+                + " Hellooooooooooo! I'm Lati!\n"
+                + " What can I do for you? :3\n"
+                + "____________________________________________________________");
     }
 
     /**
      * Bids the user farewell after using the Duke bot.
      */
     public static void bye() {
-        System.out.println(" Byeeeeee. Hope to see you again soon~~\n" +
-                "____________________________________________________________");
+        System.out.println(" Byeeeeee. Hope to see you again soon~~\n"
+                + "____________________________________________________________");
     }
 
     /**
@@ -42,9 +42,9 @@ public class UI {
      * @param index Number of tasks stored.
      */
     public static void store(String task, int index) {
-        System.out.println("Added! You want to: " + task + "\n" +
-                "Now you have " + index + (index > 1 ? " tasks!" : " task!") + "\n" +
-                "____________________________________________________________");
+        System.out.println("Added! You want to: " + task + "\n"
+                + "Now you have " + index + (index > 1 ? " tasks!" : " task!") + "\n"
+                + "____________________________________________________________");
     }
 
     /**
@@ -53,9 +53,9 @@ public class UI {
      * @param index The number of tasks left.
      */
     public static void delete(String task, int index) {
-        System.out.println("Guess you don't want to do that anymore: " + task + "\n" +
-                "Now you have " + index + (index > 1 ? " tasks!" : " task!") + "\n" +
-                "____________________________________________________________");
+        System.out.println("Guess you don't want to do that anymore: " + task + "\n"
+                + "Now you have " + index + (index > 1 ? " tasks!" : " task!") + "\n"
+                + "____________________________________________________________");
     }
 
     /**
@@ -63,9 +63,8 @@ public class UI {
      * @param task The marked task.
      */
     public static void mark(String task) {
-        System.out.println("NICEEEEE. Good job on completing the task!\n" +
-                task + "\n" +
-                "____________________________________________________________");
+        System.out.println("NICEEEEE. Good job on completing the task!\n"
+                + task + "\n" + "____________________________________________________________");
     }
 
     /**
@@ -73,9 +72,8 @@ public class UI {
      * @param task The unmarked tasks.
      */
     public static void unMark(String task) {
-        System.out.println("Ohhh... uhm, okay, task undone!\n" +
-                task + "\n" +
-                "____________________________________________________________");
+        System.out.println("Ohhh... uhm, okay, task undone!\n"
+                + task + "\n" + "____________________________________________________________");
     }
 
     /**
@@ -102,8 +100,8 @@ public class UI {
      * Prints a message if nothing is in the list.
      */
     public static void emptyListMessage() {
-        System.out.println("Hmm, nothing here...\n" +
-                "____________________________________________________________");
+        System.out.println("Hmm, nothing here...\n"
+                + "____________________________________________________________");
     }
 
     /**
@@ -120,35 +118,35 @@ public class UI {
      */
     public static void inputErrorMessage(String type) {
         switch (type) {
-        case "todo":
-            System.out.println("Whoops, wrong format! Type todo <task>\n" +
-                    "____________________________________________________________");
-            break;
-        case "deadline":
-            System.out.println("Whoops, wrong format! Type deadline <task> /by YYYY-MM-DD HH:MM\n" +
-                    "____________________________________________________________");
-            break;
-        case "event":
-            System.out.println("Whoops, wrong format! " +
-                    "Type event <task> /from YYYY-MM-DD HH:MM /to YYYY-MM-DD HH:MM\n" +
-                    "____________________________________________________________");
-            break;
-        case "mark":
-            System.out.println("Ehh? What do you want to mark? Type mark <index>\n" +
-                    "____________________________________________________________");
-            break;
-        case "unmark":
-            System.out.println("Ehh? What do you want to unmark? Type unmark <index>\n" +
-                    "____________________________________________________________");
-            break;
-        case "delete":
-            System.out.println("Ehh? What do you want to delete? Type remove <index>\n" +
-                    "____________________________________________________________");
-            break;
-        case "other":
-            System.out.println("I dunno what you're saying...\n" +
-                    "____________________________________________________________");
-            break;
+            case "todo":
+                System.out.println("Whoops, wrong format! Type todo <task>\n"
+                        + "____________________________________________________________");
+                break;
+            case "deadline":
+                System.out.println("Whoops, wrong format! Type deadline <task> /by YYYY-MM-DD HH:MM\n"
+                        + "____________________________________________________________");
+                break;
+            case "event":
+                System.out.println("Whoops, wrong format! " +
+                        "Type event <task> /from YYYY-MM-DD HH:MM /to YYYY-MM-DD HH:MM\n"
+                        + "____________________________________________________________");
+                break;
+            case "mark":
+                System.out.println("Ehh? What do you want to mark? Type mark <index>\n"
+                        + "____________________________________________________________");
+                break;
+            case "unmark":
+                System.out.println("Ehh? What do you want to unmark? Type unmark <index>\n"
+                        + "____________________________________________________________");
+                break;
+            case "delete":
+                System.out.println("Ehh? What do you want to delete? Type remove <index>\n"
+                        + "____________________________________________________________");
+                break;
+            case "other":
+                System.out.println("I dunno what you're saying...\n"
+                        + "____________________________________________________________");
+                break;
         }
     }
 

@@ -24,10 +24,7 @@ public class Parser {
     }
 
     /**
-     * Helps to parse and manage the user's inputs. "list" shows the current list, "mark / unmark"
-     * helps to mark or unmark the specific task in the list, and todo/deadline/event
-     * adds todo/deadline/event tasks respectively.
-     *
+     * Helps to parse and manage the user's inputs.
      * @param tally takes in the input string.
      */
     public void messageHandler(String tally) {
@@ -38,15 +35,15 @@ public class Parser {
             list.display();
             break;
         case "search":
-            Pattern searchCmd = Pattern.compile("search (.+)");
-            Matcher ms = searchCmd.matcher(tally);
+            Pattern searchCommand = Pattern.compile("search (.+)");
+            Matcher ms = searchCommand.matcher(tally);
             if (this.groupRun(ms, 1)) {
                 list.search(ms.group(1));
             }
             break;
         case "todo":
-            Pattern todoCmd = Pattern.compile("todo (.+)");
-            Matcher mt = todoCmd.matcher(tally);
+            Pattern todoCommand = Pattern.compile("todo (.+)");
+            Matcher mt = todoCommand.matcher(tally);
             if (this.groupRun(mt, 1)) {
                 list.store(mt.group(1));
             } else {
@@ -54,8 +51,8 @@ public class Parser {
             }
             break;
         case "deadline":
-            Pattern deadlineCmd = Pattern.compile("deadline (.+) /by (.+)");
-            Matcher md = deadlineCmd.matcher(tally);
+            Pattern deadlineCommand = Pattern.compile("deadline (.+) /by (.+)");
+            Matcher md = deadlineCommand.matcher(tally);
             if (this.groupRun(md, 2)) {
                 String formattedDeadline = this.timeParse(md.group(2));
                 if (formattedDeadline != null) {
@@ -68,8 +65,8 @@ public class Parser {
             }
             break;
         case "event":
-            Pattern eventCmd = Pattern.compile("event (.+) /from (.+) /to (.+)");
-            Matcher ml = eventCmd.matcher(tally);
+            Pattern eventCommand = Pattern.compile("event (.+) /from (.+) /to (.+)");
+            Matcher ml = eventCommand.matcher(tally);
             if (this.groupRun(ml, 3)) {
                 if (this.isValidTime(ml.group(2), ml.group(3))) {
                     String formattedStart = this.timeParse(ml.group(2));
