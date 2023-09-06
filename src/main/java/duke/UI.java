@@ -3,7 +3,7 @@ package duke;
 import java.util.Scanner;
 
 /**
- * Manages user interactions in the Duke class.
+ * Manages user interactions in the Duke bot.
  */
 public class UI {
 
