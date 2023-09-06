@@ -54,7 +54,7 @@ public class DukeList {
      * Helps to store user deadline tasks and deadlines into the list.
      *
      * @param task takes in the task given by the user.
-     * @param deadLine takes in the deadline of the deadline task.
+     * @param deadline takes in the deadline of the deadline task.
      */
     public void store(String task, String deadline) {
         Task todo = new Deadline(task, deadline);
